@@ -42,7 +42,7 @@ class puppet::server::passenger (
     'path'              => "${app_root}/public/",
     'passenger_enabled' => 'On',
   }
-  
+
   $directories = [
     $directory,
   ]
@@ -113,7 +113,7 @@ class puppet::server::passenger (
           ], "\n")
       }),
     ]
-    
+
     apache::vhost { 'puppet-http':
       docroot         => "${app_root}/public/",
       directories     => $directories_http,
